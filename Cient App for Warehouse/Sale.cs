@@ -60,7 +60,7 @@ namespace Cient_App_for_Warehouse
                 int price = 0;
                 newCon a = new newCon(Logon.log, Logon.pas);
                 price = a.GetPrice(ref P_name);
-                string[] arr = new string[6];
+                string[] arr = new string[7];
 
 
                 if (price != 0)
