@@ -12,7 +12,7 @@ namespace Cient_App_for_Warehouse
 {
     public partial class Logon : Form
     {
-       public static string log, pas;
+       public static string Log, Password;
         
         public Logon()
         {
@@ -28,21 +28,23 @@ namespace Cient_App_for_Warehouse
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             TextBox objTextBox = (TextBox)sender;
-            log = objTextBox.Text;
+            Log = objTextBox.Text;
             
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             TextBox objTextBox2 = (TextBox)sender;
-            pas = objTextBox2.Text;
+            Password = objTextBox2.Text;
         }
 
         public void Login_Click(object sender, EventArgs e)
         {
             try
             {
-                newCon baza = new newCon(log, pas);
+                var user = new User(Log, Password);
+
+                newCon baza = new newCon(Log, Password);
                 this.Hide();
                 
                 

@@ -49,7 +49,7 @@ namespace Cient_App_for_Warehouse
 
         private void Products_Click(object sender, EventArgs e)
         {
-            newCon Check_amount = new newCon(Logon.log, Logon.pas);
+            newCon Check_amount = new newCon(Logon.Log, Logon.Password);
             check_amount = Check_amount.Check_Amount(ref P_name);
             int P_amount_test = Convert.ToInt32(P_amount);
             if(P_amount_test <= check_amount)
@@ -58,7 +58,7 @@ namespace Cient_App_for_Warehouse
                 ListViewItem itm;
 
                 int price = 0;
-                newCon a = new newCon(Logon.log, Logon.pas);
+                newCon a = new newCon(Logon.Log, Logon.Password);
                 price = a.GetPrice(ref P_name);
                 string[] arr = new string[7];
 
@@ -69,7 +69,7 @@ namespace Cient_App_for_Warehouse
                     {
                         if (exp_date != "0")
                         {
-                            newCon Check_Unit_of_measurement = new newCon(Logon.log, Logon.pas);
+                            newCon Check_Unit_of_measurement = new newCon(Logon.Log, Logon.Password);
                             unit_of_measurement = Check_Unit_of_measurement.Get_unit_of_measurement(ref P_name);
                             arr[0] = Convert.ToString(x);
                             arr[1] = P_name;
@@ -105,7 +105,7 @@ namespace Cient_App_for_Warehouse
                 {
                     string Product_Name = P_name;
 
-                    newCon b = new newCon(Logon.log, Logon.pas);
+                    newCon b = new newCon(Logon.Log, Logon.Password);
 
                     Unit_price = b.GetPrice(ref Product_Name);
                     sum += Unit_price * int.Parse(Amount.Text);
@@ -136,26 +136,26 @@ namespace Cient_App_for_Warehouse
         {
             
             int Cus_ID, Invoice_ID;
-            newCon Check_Cus_ID = new newCon(Logon.log, Logon.pas);
+            newCon Check_Cus_ID = new newCon(Logon.Log, Logon.Password);
             Cus_ID = Check_Cus_ID.GetID(ref Cus_name);
 
-            newCon Check_Invoice_ID = new newCon(Logon.log, Logon.pas);
+            newCon Check_Invoice_ID = new newCon(Logon.Log, Logon.Password);
             Invoice_ID = Check_Invoice_ID.Get_Invoice_ID();
             Invoice_ID += 1;
 
-            newCon Check_Discount = new newCon(Logon.log, Logon.pas);
+            newCon Check_Discount = new newCon(Logon.Log, Logon.Password);
             Discount = Check_Discount.Get_Discount(ref Cus_name);
 
-            newCon Check_Employee_ID = new newCon(Logon.log, Logon.pas);
+            newCon Check_Employee_ID = new newCon(Logon.Log, Logon.Password);
 
-            Employee_ID = Check_Employee_ID.Get_Employee_ID(ref Logon.log);
+            Employee_ID = Check_Employee_ID.Get_Employee_ID(ref Logon.Log);
           
             sum_with_discount = sum - (sum * (Discount / 100));
 
-            newCon Add2 = new newCon(Logon.log, Logon.pas);
+            newCon Add2 = new newCon(Logon.Log, Logon.Password);
             Add2.INTO_INV_HEAD(Cus_ID, sum_with_discount, payment, Discount);
 
-            newCon Add1 = new newCon(Logon.log, Logon.pas);
+            newCon Add1 = new newCon(Logon.Log, Logon.Password);
             Add1.INTO_SALE(Employee_ID, Cus_name, Invoice_ID);
 
             foreach (ListViewItem lvi in listView1.Items)
@@ -167,15 +167,15 @@ namespace Cient_App_for_Warehouse
                 serial_number = lvi.SubItems[5].Text;
                 exp_date = lvi.SubItems[6].Text;
 
-                newCon Add3 = new newCon(Logon.log, Logon.pas);
+                newCon Add3 = new newCon(Logon.Log, Logon.Password);
                 Add3.INTO_INV_ITEMS(P_name, Invoice_ID, Convert.ToInt32(P_amount), unit_of_measurement, P_price, P_bar_code);
 
-                newCon GetAmount = new newCon(Logon.log, Logon.pas);
+                newCon GetAmount = new newCon(Logon.Log, Logon.Password);
                 Amount_base = GetAmount.Check_Amount(ref P_name);
 
                 residual = Amount_base - Convert.ToInt32(P_amount);
 
-                newCon Update1 = new newCon(Logon.log, Logon.pas);
+                newCon Update1 = new newCon(Logon.Log, Logon.Password);
                 Update1.Amount_Update(residual, P_name);
 
 
@@ -196,7 +196,7 @@ namespace Cient_App_for_Warehouse
         {
             P_bar_code = long.Parse(Bar_code.Text);
 
-            newCon Check_P_name = new newCon(Logon.log, Logon.pas);
+            newCon Check_P_name = new newCon(Logon.Log, Logon.Password);
             Product_name.Text = Check_P_name.Chceck_P_name(ref P_bar_code);
 
         }
@@ -242,7 +242,7 @@ namespace Cient_App_for_Warehouse
 
         private void NIP_number_Click(object sender, EventArgs e)
         {
-            newCon Get_NIP = new newCon(Logon.log, Logon.pas);
+            newCon Get_NIP = new newCon(Logon.Log, Logon.Password);
             NIP = Get_NIP.Check_NIP(ref Cus_name);
             NIP_number.Text = NIP;
         }

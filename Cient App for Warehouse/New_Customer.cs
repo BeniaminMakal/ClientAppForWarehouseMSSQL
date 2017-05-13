@@ -89,7 +89,7 @@ namespace Cient_App_for_Warehouse
 
         private void Add_Click(object sender, EventArgs e)
         {
-            newCon Add_Cus = new newCon(Logon.log, Logon.pas);
+            newCon Add_Cus = new newCon(Logon.Log, Logon.Password);
             Add_Cus.Add_Cust(Cus_name, C_NIP, C_City, C_Address, C_Postal_code, C_Tel, C_Email, C_WWW, C_Cus_type);
             this.Close();
         }

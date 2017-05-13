@@ -31,21 +31,21 @@ namespace Cient_App_for_Warehouse
         private void button1_Click(object sender, EventArgs e)
         {
             string check_product_name;
-            newCon Check_p_name = new newCon(Logon.log, Logon.pas);
+            newCon Check_p_name = new newCon(Logon.Log, Logon.Password);
             check_product_name = Check_p_name.Check_Product_Name(ref p_name);
             if (p_name == check_product_name)
             {
                 int final_amount;
-                newCon Check_amount = new newCon(Logon.log, Logon.pas);
+                newCon Check_amount = new newCon(Logon.Log, Logon.Password);
                 check_p_amount = Check_amount.Check_Amount(ref p_name);
                 final_amount = check_p_amount + p_amount;
 
-                newCon Update_amount = new newCon(Logon.log, Logon.pas);
+                newCon Update_amount = new newCon(Logon.Log, Logon.Password);
                 Update_amount.Amount_Update(final_amount, p_name);
 
                 try
                 {
-                    newCon Add_expiration_date = new newCon(Logon.log, Logon.pas);
+                    newCon Add_expiration_date = new newCon(Logon.Log, Logon.Password);
                     Add_expiration_date.INTO_EXP_DATE(p_name, Serial_num, Expiration_date);
                 }
                 catch

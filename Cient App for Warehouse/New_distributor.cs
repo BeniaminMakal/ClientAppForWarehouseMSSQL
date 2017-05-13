@@ -55,7 +55,7 @@ namespace Cient_App_for_Warehouse
 
         private void button1_Click(object sender, EventArgs e)
         {
-            newCon Add_Dis = new newCon(Logon.log, Logon.pas);
+            newCon Add_Dis = new newCon(Logon.Log, Logon.Password);
             Add_Dis.Add_Distrib(d_name, d_location, d_address, d_postal_code, d_tel, d_email, d_www);
             this.Close();
         }

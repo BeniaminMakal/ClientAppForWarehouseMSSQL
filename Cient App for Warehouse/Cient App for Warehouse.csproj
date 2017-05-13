@@ -73,6 +73,7 @@
       <DependentUpon>Add_new_product.cs</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Delivery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +86,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces.cs" />
     <Compile Include="Logon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +117,7 @@
     <Compile Include="New_employee.Designer.cs">
       <DependentUpon>New_employee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sale.cs">
@@ -123,6 +126,7 @@
     <Compile Include="Sale.Designer.cs">
       <DependentUpon>Sale.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <Compile Include="WarehouseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

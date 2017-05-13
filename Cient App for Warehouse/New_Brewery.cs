@@ -30,7 +30,7 @@ namespace Cient_App_for_Warehouse
 
         private void button1_Click(object sender, EventArgs e)
         {
-            newCon Add_Brewery = new newCon(Logon.log, Logon.pas);
+            newCon Add_Brewery = new newCon(Logon.Log, Logon.Password);
             Add_Brewery.Add_Brew(B_name, B_location, B_address, B_postal_code, B_Telephone, B_Email, B_WWW);
             this.Close();
         }

@@ -20,7 +20,7 @@ namespace Cient_App_for_Warehouse
         public Form1()
         {
             InitializeComponent();
-            Pracownik_info.Text = "Pracownik: " + Logon.log;
+            Pracownik_info.Text = "Pracownik: " + Logon.Log;
         }
 
         private void Clear_Click(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace Cient_App_for_Warehouse
             DataTable DT = null;
             if (DT != null)
                 DT.Clear();
-            newCon baza_win = new newCon(Logon.log, Logon.pas);
+            newCon baza_win = new newCon(Logon.Log, Logon.Password);
             dataGridView1.DataSource = baza_win.pobierz_dane("Select * FROM Breweries");
         }
 
@@ -44,7 +44,7 @@ namespace Cient_App_for_Warehouse
              DataTable DT = null;
             if (DT != null)
                 DT.Clear();
-            newCon baza_win = new newCon(Logon.log, Logon.pas);
+            newCon baza_win = new newCon(Logon.Log, Logon.Password);
             dataGridView1.DataSource = baza_win.pobierz_dane("Select * FROM Customers");
            
             
@@ -60,7 +60,7 @@ namespace Cient_App_for_Warehouse
             DataTable DT = null;
             if (DT != null)
                 DT.Clear();
-            newCon baza_win = new newCon(Logon.log, Logon.pas);
+            newCon baza_win = new newCon(Logon.Log, Logon.Password);
             dataGridView1.DataSource = baza_win.pobierz_dane("Select * FROM Products");
         }
 
@@ -83,7 +83,7 @@ namespace Cient_App_for_Warehouse
             DataTable DT = null;
             if (DT != null)
                 DT.Clear();
-            newCon baza_win = new newCon(Logon.log, Logon.pas);
+            newCon baza_win = new newCon(Logon.Log, Logon.Password);
             dataGridView1.DataSource = baza_win.pobierz_dane("Select * FROM Invoice_headers");
         }
 
@@ -96,7 +96,7 @@ namespace Cient_App_for_Warehouse
                     DataTable DT = null;
                     if (DT != null)
                         DT.Clear();
-                    newCon baza_win = new newCon(Logon.log, Logon.pas);
+                    newCon baza_win = new newCon(Logon.Log, Logon.Password);
                     dataGridView1.DataSource = baza_win.pobierz_dane("Select * FROM Invoice_items WHERE Invoice_ID =" + cell_text + ";");
                     break;
 
@@ -105,7 +105,7 @@ namespace Cient_App_for_Warehouse
                     DataTable DT1 = null;
                     if (DT1 != null)
                         DT1.Clear();
-                    newCon baza_win1 = new newCon(Logon.log, Logon.pas);
+                    newCon baza_win1 = new newCon(Logon.Log, Logon.Password);
                     dataGridView1.DataSource = baza_win1.pobierz_dane("SELECT IH.Customer_ID, IH.Invoice_ID, IH.Invoice_value, IH.Discount, IH.Date_time, IH.Payment FROM Customers AS C JOIN Invoice_headers AS IH ON C.Customer_ID=IH.Customer_ID WHERE Customer_name ='" + cell_text + "';");
                     
                     break;
@@ -115,7 +115,7 @@ namespace Cient_App_for_Warehouse
                     DataTable DT2 = null;
                     if (DT2 != null)
                         DT2.Clear();
-                    newCon baza_win2 = new newCon(Logon.log, Logon.pas);
+                    newCon baza_win2 = new newCon(Logon.Log, Logon.Password);
                     dataGridView1.DataSource = baza_win2.pobierz_dane("SELECT * FROM Products WHERE Brewery ='" + cell_text + "';");
                     
                     break;
@@ -125,7 +125,7 @@ namespace Cient_App_for_Warehouse
                         DataTable DT3 = null;
                         if (DT3 != null)
                             DT3.Clear();
-                        newCon baza_win3 = new newCon(Logon.log, Logon.pas);
+                        newCon baza_win3 = new newCon(Logon.Log, Logon.Password);
                         dataGridView1.DataSource = baza_win3.pobierz_dane("SELECT * FROM Products WHERE Distributor ='" + cell_text + "';");
 
                     break;
@@ -135,7 +135,7 @@ namespace Cient_App_for_Warehouse
                         DataTable DT4 = null;
                         if (DT4 != null)
                         DT4.Clear();
-                        newCon baza_win4 = new newCon(Logon.log, Logon.pas);
+                        newCon baza_win4 = new newCon(Logon.Log, Logon.Password);
                         dataGridView1.DataSource = baza_win4.pobierz_dane("SELECT * FROM Products WHERE P_type ='" + cell_text + "';");
                     break;
 
@@ -143,7 +143,7 @@ namespace Cient_App_for_Warehouse
                     DataTable DT5 = null;
                     if (DT5 != null)
                         DT5.Clear();
-                    newCon baza_win5 = new newCon(Logon.log, Logon.pas);
+                    newCon baza_win5 = new newCon(Logon.Log, Logon.Password);
                     dataGridView1.DataSource = baza_win5.pobierz_dane("SELECT * FROM Expiration_dates WHERE Product_name ='" + cell_text + "';");
                     break;
 
@@ -180,7 +180,7 @@ namespace Cient_App_for_Warehouse
             DataTable DT = null;
             if (DT != null)
                 DT.Clear();
-            newCon baza_win = new newCon(Logon.log, Logon.pas);
+            newCon baza_win = new newCon(Logon.Log, Logon.Password);
             dataGridView1.DataSource = baza_win.pobierz_dane("Select * FROM Distributors");
         }
 
@@ -197,7 +197,7 @@ namespace Cient_App_for_Warehouse
             DataTable DT = null;
             if (DT != null)
                 DT.Clear();
-            newCon baza_win = new newCon(Logon.log, Logon.pas);
+            newCon baza_win = new newCon(Logon.Log, Logon.Password);
             dataGridView1.DataSource = baza_win.pobierz_dane("Select * FROM Employees");
         }
 

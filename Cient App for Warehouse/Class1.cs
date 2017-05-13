@@ -10,6 +10,10 @@ using System.Data.SqlTypes;
 
 namespace Cient_App_for_Warehouse
 {
+
+    
+   
+
     /// <summary>
     /// Klasa służy do łączenia się z bazą oraz wykonywania na niej wszystkich czynności: SELECY, UPDATE, INSERT, DELETE
     /// </summary>
@@ -114,6 +118,8 @@ namespace Cient_App_for_Warehouse
         /// <summary>
         /// Wprowadza do bazy nowego klienta.
         /// </summary>
+        /// 
+        /// 
         /// <param name="Cus_name"></param>
         /// <param name="C_NIP"></param>
         /// <param name="C_City"></param>

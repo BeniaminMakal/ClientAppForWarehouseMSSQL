@@ -44,7 +44,7 @@ namespace Cient_App_for_Warehouse
         {
             try
             {
-                newCon Check_P_Brewery = new newCon(Logon.log, Logon.pas);
+                newCon Check_P_Brewery = new newCon(Logon.Log, Logon.Password);
                 Check_brewery = Check_P_Brewery.Chceck_Brewery(ref P_brewery);
 
                 if (Check_brewery == "0")
@@ -53,20 +53,20 @@ namespace Cient_App_for_Warehouse
                     this.Close();
                 }
 
-                newCon Check_Product_type = new newCon(Logon.log, Logon.pas);
+                newCon Check_Product_type = new newCon(Logon.Log, Logon.Password);
                 Check_P_type = Check_Product_type.Chceck_P_type(ref P_type);
 
                 if (Check_P_type == "0")
                 {
-                    newCon Add_Product_type = new newCon(Logon.log, Logon.pas);
+                    newCon Add_Product_type = new newCon(Logon.Log, Logon.Password);
                     Add_Product_type.Add_P_type(P_type);
                 }
                 
-                newCon Add_product = new newCon(Logon.log, Logon.pas);
+                newCon Add_product = new newCon(Logon.Log, Logon.Password);
                 Add_product.INTO_PRODUCTS(Product_price, Product_amount, P_name, P_brewery, P_distributor, P_price, P_type, P_unit_of_measurement, P_bar_code);
                 this.Close();
 
-                newCon Add_exp_date = new newCon(Logon.log, Logon.pas);
+                newCon Add_exp_date = new newCon(Logon.Log, Logon.Password);
                 Add_exp_date.INTO_EXP_DATE(P_name, serial_number, P_Exp_date);
             }
             catch
@@ -79,7 +79,7 @@ namespace Cient_App_for_Warehouse
         {
             string check_p_name;
             P_name = Prod_name.Text;
-            newCon Check_prod_name = new newCon(Logon.log, Logon.pas);
+            newCon Check_prod_name = new newCon(Logon.Log, Logon.Password);
             check_p_name = Check_prod_name.Check_Product_Name(ref P_name);
             if (P_name == check_p_name)
             {
