@@ -66,67 +66,75 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add_new_product.cs">
+    <Compile Include="DatabaseConnections\AmountUpdator.cs" />
+    <Compile Include="DatabaseConnections\DatabaseConnectionEventArgs.cs" />
+    <Compile Include="DatabaseConnections\EventWriter.cs" />
+    <Compile Include="DatabaseConnections\IEventWriter.cs" />
+    <Compile Include="DatabaseConnections\IGetDataFromProdcutsTable.cs" />
+    <Compile Include="WinForms\Add_new_product.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add_new_product.Designer.cs">
+    <Compile Include="WinForms\Add_new_product.Designer.cs">
       <DependentUpon>Add_new_product.cs</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
-    <Compile Include="DatabaseConnection.cs" />
-    <Compile Include="Delivery.cs">
+    <Compile Include="DatabaseConnections\DatabaseConnection.cs" />
+    <Compile Include="DatabaseConnections\GetDataFromDatabase.cs" />
+    <Compile Include="WinForms\Delivery.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Delivery.Designer.cs">
+    <Compile Include="WinForms\Delivery.Designer.cs">
       <DependentUpon>Delivery.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="WinForms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="WinForms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces.cs" />
-    <Compile Include="Logon.cs">
+    <Compile Include="DatabaseConnections\IAmountUpdator.cs" />
+    <Compile Include="DatabaseConnections\IDatabaseConnection.cs" />
+    <Compile Include="User\IUser.cs" />
+    <Compile Include="WinForms\Logon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Logon.Designer.cs">
+    <Compile Include="WinForms\Logon.Designer.cs">
       <DependentUpon>Logon.cs</DependentUpon>
     </Compile>
-    <Compile Include="New_Brewery.cs">
+    <Compile Include="WinForms\New_Brewery.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="New_Brewery.Designer.cs">
+    <Compile Include="WinForms\New_Brewery.Designer.cs">
       <DependentUpon>New_Brewery.cs</DependentUpon>
     </Compile>
-    <Compile Include="New_Customer.cs">
+    <Compile Include="WinForms\New_Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="New_Customer.Designer.cs">
+    <Compile Include="WinForms\New_Customer.Designer.cs">
       <DependentUpon>New_Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="New_distributor.cs">
+    <Compile Include="WinForms\New_distributor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="New_distributor.Designer.cs">
+    <Compile Include="WinForms\New_distributor.Designer.cs">
       <DependentUpon>New_distributor.cs</DependentUpon>
     </Compile>
-    <Compile Include="New_employee.cs">
+    <Compile Include="WinForms\New_employee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="New_employee.Designer.cs">
+    <Compile Include="WinForms\New_employee.Designer.cs">
       <DependentUpon>New_employee.cs</DependentUpon>
     </Compile>
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sale.cs">
+    <Compile Include="WinForms\Sale.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sale.Designer.cs">
+    <Compile Include="WinForms\Sale.Designer.cs">
       <DependentUpon>Sale.cs</DependentUpon>
     </Compile>
-    <Compile Include="User.cs" />
+    <Compile Include="User\User.cs" />
     <Compile Include="WarehouseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -137,28 +145,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WholesaleDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Add_new_product.resx">
+    <EmbeddedResource Include="WinForms\Add_new_product.resx">
       <DependentUpon>Add_new_product.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Delivery.resx">
+    <EmbeddedResource Include="WinForms\Delivery.resx">
       <DependentUpon>Delivery.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="WinForms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Logon.resx">
+    <EmbeddedResource Include="WinForms\Logon.resx">
       <DependentUpon>Logon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="New_Brewery.resx">
+    <EmbeddedResource Include="WinForms\New_Brewery.resx">
       <DependentUpon>New_Brewery.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="New_Customer.resx">
+    <EmbeddedResource Include="WinForms\New_Customer.resx">
       <DependentUpon>New_Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="New_distributor.resx">
+    <EmbeddedResource Include="WinForms\New_distributor.resx">
       <DependentUpon>New_distributor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="New_employee.resx">
+    <EmbeddedResource Include="WinForms\New_employee.resx">
       <DependentUpon>New_employee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -170,7 +178,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Sale.resx">
+    <EmbeddedResource Include="WinForms\Sale.resx">
       <DependentUpon>Sale.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -220,6 +228,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

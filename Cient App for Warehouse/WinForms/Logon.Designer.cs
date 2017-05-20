@@ -33,6 +33,7 @@
             this.LoginBox = new System.Windows.Forms.TextBox();
             this.PasswordBox = new System.Windows.Forms.TextBox();
             this.Login = new System.Windows.Forms.Button();
+            this.NewLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -78,13 +79,23 @@
             // 
             // Login
             // 
-            this.Login.Location = new System.Drawing.Point(52, 134);
+            this.Login.Location = new System.Drawing.Point(12, 132);
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(75, 23);
             this.Login.TabIndex = 4;
-            this.Login.Text = "Login";
+            this.Login.Text = "Old_Login";
             this.Login.UseVisualStyleBackColor = true;
             this.Login.Click += new System.EventHandler(this.Login_Click);
+            // 
+            // NewLogin
+            // 
+            this.NewLogin.Location = new System.Drawing.Point(98, 132);
+            this.NewLogin.Name = "NewLogin";
+            this.NewLogin.Size = new System.Drawing.Size(75, 23);
+            this.NewLogin.TabIndex = 5;
+            this.NewLogin.Text = "New_Login";
+            this.NewLogin.UseVisualStyleBackColor = true;
+            this.NewLogin.Click += new System.EventHandler(this.NewLogin_Click);
             // 
             // Logon
             // 
@@ -92,6 +103,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(185, 176);
+            this.Controls.Add(this.NewLogin);
             this.Controls.Add(this.Login);
             this.Controls.Add(this.PasswordBox);
             this.Controls.Add(this.LoginBox);
@@ -112,5 +124,6 @@
         private System.Windows.Forms.TextBox LoginBox;
         private System.Windows.Forms.TextBox PasswordBox;
         private System.Windows.Forms.Button Login;
+        private System.Windows.Forms.Button NewLogin;
     }
 }

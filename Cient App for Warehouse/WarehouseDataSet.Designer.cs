@@ -5746,7 +5746,7 @@ namespace Cient_App_for_Warehouse.WarehouseDataSetTableAdapters {
     
     
     /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
+    ///Represents the Connection and commands used to retrieve and save data.
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
@@ -6253,7 +6253,7 @@ SELECT ID, Br_name, Br_Location, Adress, Postal_code, Telephone, Email, WWW FROM
     }
     
     /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
+    ///Represents the Connection and commands used to retrieve and save data.
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
@@ -6598,7 +6598,7 @@ SELECT Cus_Type, Discount FROM Cus_Types WHERE (Cus_Type = @Cus_Type)";
     }
     
     /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
+    ///Represents the Connection and commands used to retrieve and save data.
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
@@ -7240,7 +7240,7 @@ SELECT Customer_ID, Customer_name, NIP, Cus_Location, Adress, Postal_code, Telep
     }
     
     /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
+    ///Represents the Connection and commands used to retrieve and save data.
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
@@ -7747,7 +7747,7 @@ SELECT ID, Dis_name, Dis_Location, Adress, Postal_code, Telephone, Email, WWW FR
     }
     
     /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
+    ///Represents the Connection and commands used to retrieve and save data.
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
@@ -8124,7 +8124,7 @@ SELECT Employee_ID, Position, Em_Name, Surname FROM Employees WHERE (Employee_ID
     }
     
     /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
+    ///Represents the Connection and commands used to retrieve and save data.
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
@@ -8503,7 +8503,7 @@ SELECT Invoice_ID, Customer_ID, Payment, Discount, Date_time, Invoice_value FROM
     }
     
     /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
+    ///Represents the Connection and commands used to retrieve and save data.
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
@@ -8911,7 +8911,7 @@ SELECT ID, Invoice_ID, Product_name, Unit_price, Amount, Unit_of_measurement, Di
     }
     
     /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
+    ///Represents the Connection and commands used to retrieve and save data.
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
@@ -9390,7 +9390,7 @@ SELECT ID, Product_name, Brewery, Distributor, Expiration_date, Price, P_type, A
     }
     
     /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
+    ///Represents the Connection and commands used to retrieve and save data.
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
@@ -9708,7 +9708,7 @@ SELECT ID, Product_name, Brewery, Distributor, Expiration_date, Price, P_type, A
     }
     
     /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
+    ///Represents the Connection and commands used to retrieve and save data.
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
@@ -10723,57 +10723,57 @@ SELECT Sale_ID, Employee_ID, Customer_name, Invoice_ID, Sale_date, Operation_sta
             }
             if (((this._breweriesTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._breweriesTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same Connection s" +
                         "tring.");
             }
             if (((this._cus_TypesTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._cus_TypesTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same Connection s" +
                         "tring.");
             }
             if (((this._customersTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._customersTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same Connection s" +
                         "tring.");
             }
             if (((this._distributorsTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._distributorsTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same Connection s" +
                         "tring.");
             }
             if (((this._employeesTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._employeesTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same Connection s" +
                         "tring.");
             }
             if (((this._invoice_headersTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._invoice_headersTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same Connection s" +
                         "tring.");
             }
             if (((this._invoice_itemsTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._invoice_itemsTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same Connection s" +
                         "tring.");
             }
             if (((this._productsTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._productsTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same Connection s" +
                         "tring.");
             }
             if (((this._products_TypesTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._products_TypesTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same Connection s" +
                         "tring.");
             }
             if (((this._saleTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._saleTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same Connection s" +
                         "tring.");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
-                throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
+                throw new global::System.ApplicationException("TableAdapterManager contains no Connection information. Set each TableAdapterMana" +
                         "ger TableAdapter property to a valid TableAdapter instance.");
             }
             bool workConnOpened = false;
@@ -10787,7 +10787,7 @@ SELECT Sale_ID, Employee_ID, Customer_name, Invoice_ID, Sale_date, Operation_sta
             }
             global::System.Data.IDbTransaction workTransaction = workConnection.BeginTransaction();
             if ((workTransaction == null)) {
-                throw new global::System.ApplicationException("The transaction cannot begin. The current data connection does not support transa" +
+                throw new global::System.ApplicationException("The transaction cannot begin. The current data Connection does not support transa" +
                         "ctions or the current state is not allowing the transaction to begin.");
             }
             global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows = new global::System.Collections.Generic.List<global::System.Data.DataRow>();

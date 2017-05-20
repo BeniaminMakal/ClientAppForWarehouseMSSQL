@@ -30,7 +30,7 @@ namespace Cient_App_for_Warehouse
         public newCon(string login, string password)
         {
             polaczenie2 = new SqlConnection();
-            polaczenie2.ConnectionString = "Data Source= (local); Initial Catalog= Warehouse; User Id=" + login + "; Password = " + password + ";";
+            polaczenie2.ConnectionString = @"Data Source=localhost\SQLEXPRESS; Initial Catalog= Warehouse; User Id=" + login + "; Password = " + password + ";";
 
             com = new SqlCommand();
             com.Connection = polaczenie2;

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,18 +20,4 @@ namespace Cient_App_for_Warehouse
         void SetLogin(string login);
         void SetPassword(string password);
     }
-
-    public interface IDatabaseConnection
-    {
-        bool IsConnected { get; }
-        SqlConnection connection { get; }
-        void OpenNewConnection(User user);
-
-    }
-
-    public interface IAmountUpdator
-    {
-        int AmountUpdator(int amount, string productName);
-    }
-
 }
