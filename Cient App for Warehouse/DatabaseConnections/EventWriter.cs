@@ -1,22 +1,27 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Runtime.InteropServices;
 
 namespace Cient_App_for_Warehouse
 {
     public class EventWriter : IEventWriter
     {
-        private string path = @"C:\Users\benia\OneDrive\Dokumenty\Repositories\ClientAppForWarehouseMSSQL";
+
+        private string path = @"C:\Users\benia\OneDrive\Dokumenty\Repositories\ClientAppForWarehouseMSSQL\Log.txt";
+
         public bool IsFileExists { get; set; }
+
         public void CreateFile()
+
         {
+            IsFileExists = File.Exists(path);
+
             if (IsFileExists == true)
             {
                 return;
             }
 
-            
-            StreamWriter newWriter = new StreamWriter(path);
-            newWriter.WriteLine("test");
+            using (Stream stream = File.Create(path))
 
             IsFileExists = true;
         }
@@ -28,8 +33,12 @@ namespace Cient_App_for_Warehouse
                 CreateFile();
             }
 
+            using (StreamWriter streamWriter = File.AppendText(path))
+            {
+                streamWriter.WriteLine($"{DateTime.Now} Logged user: {user.Login}");
 
-
+            }
         }
+
     }
 }
