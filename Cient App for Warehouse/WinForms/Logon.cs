@@ -48,6 +48,9 @@ namespace Cient_App_for_Warehouse
                 var databaseConnection = new DatabaseConnection();
                 databaseConnection.OpenNewConnection(user);
 
+                EventWriter eventWriter = new EventWriter();
+                eventWriter.WriteToFile(user);
+
                 this.Hide();
 
                 Form1 form1 = new Form1();
