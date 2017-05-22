@@ -4,6 +4,7 @@
     {
         bool IsFileExists { get; set; }
         void CreateFile();
-        void WriteToFile(User user);
+        void WriteToFile<T, Y>(T first, Y secound);
+        void WriteToFile<T>(T first);
     }
 }
