@@ -49,7 +49,7 @@ namespace Cient_App_for_Warehouse
 
                 if (Check_brewery == "0")
                 {
-                    MessageBox.Show("We don't have this brewery in our database. First of all, you have to add it to database");
+                    MessageBox.Show("We don't have this brewery in our database. First of all, you have to add it to database.");
                     this.Close();
                 }
 

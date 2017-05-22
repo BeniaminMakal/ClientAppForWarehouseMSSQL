@@ -26,8 +26,6 @@ namespace ClientAppForBeerWarehouse.TestEndToEnd
         {
             user = new User("cashier1", "cashier1");
             fakeDatabaseConnection = new FakeDatabaseConnection();
-            int amount = 5;
-            
             getterPriceOfBeer = new GetterPriceOfBeer(fakeDatabaseConnection);
             
         }

@@ -14,6 +14,7 @@ namespace Cient_App_for_Warehouse
     {
 
         public static string Log, Password;
+        public static User user; 
 
         public Logon()
         {
@@ -41,14 +42,19 @@ namespace Cient_App_for_Warehouse
 
         private void NewLogin_Click(object sender, EventArgs e)
         {
+            string userName;
+
+            
+
             try
             {
-                User user = new User(Log, Password);
+                user = new User(Log, Password);
                 var databaseConnection = new DatabaseConnection();
                 databaseConnection.OpenNewConnection(user);
 
-                Writer writer = new Writer();
-                writer.WriteToFile(user);
+                LoginWriter writer = new LoginWriter();
+
+                writer.WriteToFile(user.Login);
 
                 this.Hide();
 

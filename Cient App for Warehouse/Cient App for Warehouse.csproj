@@ -71,6 +71,7 @@
     <Compile Include="DatabaseConnections\Writer.cs" />
     <Compile Include="DatabaseConnections\IWriter.cs" />
     <Compile Include="DatabaseConnections\IGetDataFromProdcutsTable.cs" />
+    <Compile Include="GetDataFromDatabase\GetIdOfBeer.cs" />
     <Compile Include="GetDataFromDatabase\test.cs" />
     <Compile Include="GetDataFromDatabase\GetPriceOfBeer.cs" />
     <Compile Include="WinForms\Add_new_product.cs">

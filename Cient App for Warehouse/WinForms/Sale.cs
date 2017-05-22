@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cient_App_for_Warehouse.GetDataFromDatabase;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,6 +50,7 @@ namespace Cient_App_for_Warehouse
 
         private void Products_Click(object sender, EventArgs e)
         {
+            
             newCon Check_amount = new newCon(Logon.Log, Logon.Password);
             check_amount = Check_amount.Check_Amount(ref P_name);
             int P_amount_test = Convert.ToInt32(P_amount);
@@ -57,9 +59,14 @@ namespace Cient_App_for_Warehouse
 
                 ListViewItem itm;
 
+                IDatabaseConnection _databaseConnection = new DatabaseConnection();
+                _databaseConnection.OpenNewConnection(user);
+                GetterPriceOfBeer getterPriceOfBeer = new GetterPriceOfBeer()
+
                 int price = 0;
                 newCon a = new newCon(Logon.Log, Logon.Password);
                 price = a.GetPrice(ref P_name);
+                
                 string[] arr = new string[7];
 
 
