@@ -8,9 +8,11 @@ namespace Cient_App_for_Warehouse
 {
     public class Product
     {
-        public int Amount { get; private set; }
         public string Name { get; private set; }
+        public int Amount { get; private set; }
         public int Price { get; private set; }
+        public string Brewery { get; private set; }
+        
 
         public Product(int amount, string name)
         {

@@ -71,6 +71,8 @@
     <Compile Include="DatabaseConnections\Writer.cs" />
     <Compile Include="DatabaseConnections\IWriter.cs" />
     <Compile Include="DatabaseConnections\IGetDataFromProdcutsTable.cs" />
+    <Compile Include="GetDataFromDatabase\test.cs" />
+    <Compile Include="GetDataFromDatabase\GetPriceOfBeer.cs" />
     <Compile Include="WinForms\Add_new_product.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,7 +81,6 @@
     </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="DatabaseConnections\DatabaseConnection.cs" />
-    <Compile Include="DatabaseConnections\GetDataFromDatabase.cs" />
     <Compile Include="WinForms\Delivery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,7 +126,7 @@
     <Compile Include="WinForms\New_employee.Designer.cs">
       <DependentUpon>New_employee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product.cs" />
+    <Compile Include="Product\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WinForms\Sale.cs">
@@ -181,6 +182,7 @@
     <EmbeddedResource Include="WinForms\Sale.resx">
       <DependentUpon>Sale.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -228,7 +230,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

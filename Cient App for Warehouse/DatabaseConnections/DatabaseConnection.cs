@@ -7,7 +7,31 @@ using System.Threading.Tasks;
 
 namespace Cient_App_for_Warehouse
 {
-    class DatabaseConnection : IDatabaseConnection
+    public class FakeDatabaseConnection : IDatabaseConnection
+    {
+        public bool IsConnected { get; private set; }
+
+        public SqlConnection Connection { get; private set; }
+
+        public event EventHandler<DatabaseConnectionEventArgs> DatabaseConnected;
+
+        public void OnDatabaseConnected(User user)
+        {
+            if (DatabaseConnected != null)
+                DatabaseConnected(this, new DatabaseConnectionEventArgs() { User = user });
+        }
+
+        public void OpenNewConnection(User user)
+        {
+            Connection = new SqlConnection(@"Data Source = localhost\SQLEXPRESS;" +
+                                                      " Initial Catalog = Warehouse.Tests; User Id = " + user.Login +
+                                                      "; Password = " + user.Password + "; ");
+            Connection.Open();
+            IsConnected = true;
+        }
+    }
+
+    public class DatabaseConnection : IDatabaseConnection
     {
         public bool IsConnected { get; private set; }
 

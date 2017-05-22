@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cient_App_for_Warehouse.DatabaseConnections
+namespace ClientAppForBeerWarehouse.TestEndToEnd
 {
-    class GetDataFromDatabase
+    class ConnectToFakeDatabase
     {
-
     }
 }

@@ -11,7 +11,7 @@ namespace Cient_App_for_Warehouse
             _databaseconnection = DatabaseConnection;
         }
 
-        int IAmountUpdator.AmountUpdator(int amount, string productName)
+        int IAmountUpdator.AmountUpdate(int amount, string productName)
         {
             try
             {
@@ -20,6 +20,7 @@ namespace Cient_App_for_Warehouse
                 SqlCommand.Parameters.AddWithValue("@amount", amount);
                 SqlCommand.Parameters.AddWithValue("@P_name", productName);
                 SqlCommand.Connection = _databaseconnection.Connection;
+                result = SqlCommand.ExecuteNonQuery();
                 return result;
             }
             finally
