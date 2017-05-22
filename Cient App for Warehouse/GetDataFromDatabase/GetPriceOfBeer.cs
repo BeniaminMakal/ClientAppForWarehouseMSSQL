@@ -7,7 +7,7 @@ namespace Cient_App_for_Warehouse.GetDataFromDatabase
 {
     public interface IGetterPriceOfBeer
     {
-        int GetPriceOfBeer(string productName);
+        int GetPriceOfBeer(string productName, User user);
     }
 
     public class GetterPriceOfBeer : IGetterPriceOfBeer
@@ -20,7 +20,7 @@ namespace Cient_App_for_Warehouse.GetDataFromDatabase
             _databaseConnection = DatabaseConnection;
         }
 
-        public int GetPriceOfBeer(string productName)
+        public int GetPriceOfBeer(string productName, User user)
         {
             int price = 0;
             SqlDataReader reader = null;
@@ -28,7 +28,7 @@ namespace Cient_App_for_Warehouse.GetDataFromDatabase
             {
                 var sqlCommand = new SqlCommand("SELECT Price FROM Products WHERE Product_name = @productName;");
                 sqlCommand.Parameters.AddWithValue("@productName", productName);
-                sqlCommand.Connection = _databaseConnection.Connection;
+                sqlCommand.Connection = _databaseConnection.OpenNewConnection(user);
                 reader = sqlCommand.ExecuteReader();
                 while (reader.Read())
                 {

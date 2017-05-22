@@ -21,13 +21,14 @@ namespace Cient_App_for_Warehouse
                 DatabaseConnected(this, new DatabaseConnectionEventArgs() { User = user });
         }
 
-        public void OpenNewConnection(User user)
+        public SqlConnection OpenNewConnection(User user)
         {
             Connection = new SqlConnection(@"Data Source = localhost\SQLEXPRESS;" +
                                                       " Initial Catalog = Warehouse.Tests; User Id = " + user.Login +
                                                       "; Password = " + user.Password + "; ");
             Connection.Open();
             IsConnected = true;
+            return Connection;
         }
     }
 
@@ -40,13 +41,14 @@ namespace Cient_App_for_Warehouse
         public event EventHandler<DatabaseConnectionEventArgs> DatabaseConnected;
 
 
-        public void OpenNewConnection(User user)
+        public SqlConnection OpenNewConnection(User user)
         {
             Connection = new SqlConnection(@"Data Source = localhost\SQLEXPRESS;" +
                                           " Initial Catalog = Warehouse; User Id = " + user.Login +
                                           "; Password = " + user.Password + "; ");
             Connection.Open();
             IsConnected = true;
+            return Connection;
         }
 
 

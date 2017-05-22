@@ -1,4 +1,5 @@
 ﻿using Cient_App_for_Warehouse;
+using Cient_App_for_Warehouse.GetDataFromDatabase;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,10 @@ namespace ClientAppForBeerWarehouse.TestEndToEnd
     {
         public User user;
         public IDatabaseConnection fakeDatabaseConnection;
+        public GetterPriceOfBeer getterPriceOfBeer;
+        public string productName = "Coin";
+        public int amount;
+        public int result;
 
         [SetUp]
         public void Setup()
@@ -22,20 +27,19 @@ namespace ClientAppForBeerWarehouse.TestEndToEnd
             user = new User("cashier1", "cashier1");
             fakeDatabaseConnection = new FakeDatabaseConnection();
             int amount = 5;
-            string productName = "Coin";
+            
+            getterPriceOfBeer = new GetterPriceOfBeer(fakeDatabaseConnection);
+            
         }
 
         [Test]
-        public void test_connection_to_database_prop_IsConnected_should_be_true()
+        public void price_of_beer_coin_shoulf_be_11()
         {
-            fakeDatabaseConnection.OpenNewConnection(user);
+            result =  getterPriceOfBeer.GetPriceOfBeer(productName, user);
 
-            Assert.IsTrue(fakeDatabaseConnection.IsConnected);
+
+            Assert.GreaterOrEqual(result, 11);
         }
-        //public void get_price_of_beer_coin_should_return_11()
-        //{
-        //    DatabaseConnection.OpenNewConnection(user);
-        //    SqlCommand sqlCommand = new SqlCommand("")
-        //}
+       
     }
 }

@@ -7,7 +7,7 @@ namespace Cient_App_for_Warehouse
     {
         bool IsConnected { get; }
         SqlConnection Connection { get; }
-        void OpenNewConnection(User user);
+        SqlConnection OpenNewConnection(User user);
         event EventHandler<DatabaseConnectionEventArgs> DatabaseConnected;
         void OnDatabaseConnected(User user);
 
