@@ -68,8 +68,8 @@
   <ItemGroup>
     <Compile Include="DatabaseConnections\AmountUpdator.cs" />
     <Compile Include="DatabaseConnections\DatabaseConnectionEventArgs.cs" />
-    <Compile Include="DatabaseConnections\EventWriter.cs" />
-    <Compile Include="DatabaseConnections\IEventWriter.cs" />
+    <Compile Include="DatabaseConnections\Writer.cs" />
+    <Compile Include="DatabaseConnections\IWriter.cs" />
     <Compile Include="DatabaseConnections\IGetDataFromProdcutsTable.cs" />
     <Compile Include="WinForms\Add_new_product.cs">
       <SubType>Form</SubType>

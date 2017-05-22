@@ -18,7 +18,6 @@ namespace Cient_App_for_Warehouse
         public Logon()
         {
             InitializeComponent();
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -48,8 +47,8 @@ namespace Cient_App_for_Warehouse
                 var databaseConnection = new DatabaseConnection();
                 databaseConnection.OpenNewConnection(user);
 
-                EventWriter eventWriter = new EventWriter();
-                eventWriter.WriteToFile(user);
+                Writer writer = new Writer();
+                writer.WriteToFile(user);
 
                 this.Hide();
 

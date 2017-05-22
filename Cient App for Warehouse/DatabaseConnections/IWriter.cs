@@ -1,6 +1,6 @@
 ﻿namespace Cient_App_for_Warehouse
 {
-    public interface IEventWriter
+    public interface IWriter
     {
         bool IsFileExists { get; set; }
         void CreateFile();

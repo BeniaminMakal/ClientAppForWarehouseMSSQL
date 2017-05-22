@@ -4,13 +4,16 @@ using System.Runtime.InteropServices;
 
 namespace Cient_App_for_Warehouse
 {
-    public class EventWriter : IEventWriter
+    public class EventWriter : EventArgs
+    {
+        
+    }
+
+    public class Writer : IWriter
     {
 
         private string path = @"C:\Users\benia\OneDrive\Dokumenty\Repositories\ClientAppForWarehouseMSSQL\Log.txt";
-
         public bool IsFileExists { get; set; }
-
         public void CreateFile()
 
         {
