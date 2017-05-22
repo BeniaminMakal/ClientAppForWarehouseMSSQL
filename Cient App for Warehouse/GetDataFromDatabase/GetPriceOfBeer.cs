@@ -5,6 +5,23 @@ using System.Windows.Forms;
 
 namespace Cient_App_for_Warehouse.GetDataFromDatabase
 {
+    public class GetDataFromDatabaseEventArgs : EventArgs
+    {
+        public LogInformation LogInformation { get; set; }
+    }
+
+    public class LogInformation
+    {
+        public string ProductName { get; set; }
+        public string UserName { get; set; }
+
+        public LogInformation(string productName, string userName)
+        {
+            ProductName = productName;
+            UserName = userName;
+        }
+    }
+
     public interface IGetterPriceOfBeer
     {
         int GetPriceOfBeer(string productName, User user);
@@ -24,6 +41,7 @@ namespace Cient_App_for_Warehouse.GetDataFromDatabase
         {
             int price = 0;
             SqlDataReader reader = null;
+            LogInformation logInformation = new LogInformation(productName, user.FirstName);
             try
             {
                 var sqlCommand = new SqlCommand("SELECT Price FROM Products WHERE Product_name = @productName;");
@@ -34,15 +52,20 @@ namespace Cient_App_for_Warehouse.GetDataFromDatabase
                 {
                     price = Convert.ToInt32(String.Format("{0}", reader["Price"]));
                 }
+                OnGotPriceOfBeer(logInformation);
             }
             catch (System.Exception e)
             {
-
                 MessageBox.Show(e.Message);
             }
 
             return price;
+        }
 
+        protected virtual void OnGotPriceOfBeer(LogInformation logInformation)
+        {
+            if (PriceOfBeerDelivered != null)
+                PriceOfBeerDelivered(this, new GetDataFromDatabaseEventArgs() { LogInformation = logInformation });
         }
     }
 }
