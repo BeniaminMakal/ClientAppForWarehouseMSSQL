@@ -53,6 +53,15 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -71,9 +80,19 @@
     <Compile Include="DatabaseConnections\Writer.cs" />
     <Compile Include="DatabaseConnections\IWriter.cs" />
     <Compile Include="DatabaseConnections\IGetDataFromProdcutsTable.cs" />
+    <Compile Include="Domain\PartnerTypes.cs" />
+    <Compile Include="Domain\TradingPartnerType.cs" />
+    <Compile Include="Domain\TradingPartners.cs" />
+    <Compile Include="Domain\CustomerTypes.cs" />
+    <Compile Include="Domain\DataTable.cs" />
+    <Compile Include="Domain\ExpirationDates.cs" />
+    <Compile Include="Domain\ProductsTypes.cs" />
     <Compile Include="GetDataFromDatabase\GetIdOfBeer.cs" />
     <Compile Include="GetDataFromDatabase\test.cs" />
     <Compile Include="GetDataFromDatabase\GetPriceOfBeer.cs" />
+    <Compile Include="Repositories\Customer.cs" />
+    <Compile Include="Repositories\IProductRepository.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
     <Compile Include="WinForms\Add_new_product.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,7 +115,7 @@
     </Compile>
     <Compile Include="DatabaseConnections\IAmountUpdator.cs" />
     <Compile Include="DatabaseConnections\IDatabaseConnection.cs" />
-    <Compile Include="User\IUser.cs" />
+    <Compile Include="Domain\IUser.cs" />
     <Compile Include="WinForms\Logon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,7 +146,7 @@
     <Compile Include="WinForms\New_employee.Designer.cs">
       <DependentUpon>New_employee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product\Product.cs" />
+    <Compile Include="Domain\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WinForms\Sale.cs">
@@ -136,7 +155,7 @@
     <Compile Include="WinForms\Sale.Designer.cs">
       <DependentUpon>Sale.cs</DependentUpon>
     </Compile>
-    <Compile Include="User\User.cs" />
+    <Compile Include="Domain\User.cs" />
     <Compile Include="WarehouseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -234,6 +253,10 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

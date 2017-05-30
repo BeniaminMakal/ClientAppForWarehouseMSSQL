@@ -8,6 +8,7 @@ namespace Cient_App_for_Warehouse
 {
     public interface IUser
     {
+        Guid ID { get; }
         string FirstName { get; }
         string LastName { get; }
         string Position { get; }

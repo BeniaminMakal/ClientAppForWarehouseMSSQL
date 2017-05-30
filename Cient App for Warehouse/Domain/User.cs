@@ -4,14 +4,18 @@ namespace Cient_App_for_Warehouse
 {
     public class User : IUser
     {
+        public Guid ID { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
         public string Position { get; private set; }
         public string Login { get; private set; }
         public string Password { get; private set; }
 
+        
+
         public User(string login, string password)
         {
+            ID = Guid.NewGuid();
             Login = login;
             Password = password;
         }
