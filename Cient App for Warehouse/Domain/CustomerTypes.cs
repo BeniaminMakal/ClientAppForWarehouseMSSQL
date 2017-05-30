@@ -2,6 +2,7 @@
 
 namespace Cient_App_for_Warehouse
 {
+
     public interface ICustomerTypes
     {
         string CustomerType { get; }

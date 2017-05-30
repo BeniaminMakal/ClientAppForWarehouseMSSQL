@@ -15,6 +15,7 @@ namespace Cient_App_for_Warehouse
         string WWW { get; }
         string CustomerType { get; }
     }
+
     public class TradingPartners : ITradingPartners
     {
         public Guid PartnerID { get; private set; }

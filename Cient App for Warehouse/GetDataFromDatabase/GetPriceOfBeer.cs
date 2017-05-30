@@ -24,7 +24,7 @@ namespace Cient_App_for_Warehouse.GetDataFromDatabase
 
     public interface IGetterPriceOfBeer
     {
-        int GetPriceOfBeer(string productName, User user);
+        int GetPriceOfBeer(string productName, Employee user);
     }
 
     public class GetterPriceOfBeer : IGetterPriceOfBeer
@@ -37,7 +37,7 @@ namespace Cient_App_for_Warehouse.GetDataFromDatabase
             _databaseConnection = DatabaseConnection;
         }
 
-        public int GetPriceOfBeer(string productName, User user)
+        public int GetPriceOfBeer(string productName, Employee user)
         {
             int price = 0;
             SqlDataReader reader = null;

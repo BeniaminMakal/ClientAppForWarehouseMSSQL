@@ -2,7 +2,7 @@
 
 namespace Cient_App_for_Warehouse
 {
-    public class User : IUser
+    public class Employee : IUser
     {
         public Guid ID { get; private set; }
         public string FirstName { get; private set; }
@@ -13,7 +13,7 @@ namespace Cient_App_for_Warehouse
 
         
 
-        public User(string login, string password)
+        public Employee(string login, string password)
         {
             ID = Guid.NewGuid();
             Login = login;

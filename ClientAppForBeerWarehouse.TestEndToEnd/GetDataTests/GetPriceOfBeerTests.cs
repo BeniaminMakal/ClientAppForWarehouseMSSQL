@@ -14,7 +14,7 @@ namespace ClientAppForBeerWarehouse.TestEndToEnd
     [TestFixture]
     public class GetPriceOfBeerTests
     {
-        public User user;
+        public Employee user;
         public IDatabaseConnection fakeDatabaseConnection;
         public GetterPriceOfBeer getterPriceOfBeer;
         public string productName = "Coin";
@@ -24,7 +24,7 @@ namespace ClientAppForBeerWarehouse.TestEndToEnd
         [SetUp]
         public void Setup()
         {
-            user = new User("cashier1", "cashier1");
+            user = new Employee("cashier1", "cashier1");
             fakeDatabaseConnection = new FakeDatabaseConnection();
             getterPriceOfBeer = new GetterPriceOfBeer(fakeDatabaseConnection);
             

@@ -14,7 +14,7 @@ namespace Cient_App_for_Warehouse
     {
 
         public static string Log, Password;
-        public static User user; 
+        public static Employee user; 
 
         public Logon()
         {
@@ -48,7 +48,7 @@ namespace Cient_App_for_Warehouse
 
             try
             {
-                user = new User(Log, Password);
+                user = new Employee(Log, Password);
                 var databaseConnection = new DatabaseConnection();
                 databaseConnection.OpenNewConnection(user);
 
@@ -74,7 +74,7 @@ namespace Cient_App_for_Warehouse
         {
             try
             {
-                var user = new User(Log, Password);
+                var user = new Employee(Log, Password);
 
                 newCon baza = new newCon(Log, Password);
                 this.Hide();

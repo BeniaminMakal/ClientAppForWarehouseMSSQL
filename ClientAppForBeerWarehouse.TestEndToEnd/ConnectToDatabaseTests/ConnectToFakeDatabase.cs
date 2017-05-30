@@ -10,13 +10,13 @@ namespace ClientAppForBeerWarehouse.TestEndToEnd
 {
     class ConnectToFakeDatabase
     {
-        public User user;
+        public Employee user;
         public IDatabaseConnection fakeDatabaseConnection;
 
         [SetUp]
         public void Setup()
         {
-            user = new User("cashier1", "cashier1");
+            user = new Employee("cashier1", "cashier1");
             fakeDatabaseConnection = new FakeDatabaseConnection();
             int amount = 5;
             string productName = "Coin";

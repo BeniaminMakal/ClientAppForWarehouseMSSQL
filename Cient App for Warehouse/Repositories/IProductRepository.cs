@@ -1,39 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Cient_App_for_Warehouse.Repositories
 {
-    public interface IProductRepository
+    public interface IProductRepository : IRepository
     {
-        int GetPrice(Guid ID);
-        int GetIDFromDatabse(Guid ID);
-        string GetUnitOfMeasurement(Guid ID);
-        int GetAmount(Guid ID);
-        string GetProductName(string productName);
-    }
+        Product Get(string productName);
 
-   
+        Product Get(Guid productID);
 
-    public interface IInvoiceRepository
-    {
-        int GetMaxInvoiceID();
+        IEnumerable<Product> GetAll();
 
+        void Add(Product product);
 
-    }
+        void Update(Product product);
 
-    public interface ISaleRepository
-    {
-        int GetMaxSaleID();
-    }
+        void Remowe(Guid productID);
 
-    public interface ICustomerRepository
-    {
-        int GetDiscount(Guid ID);
-        int GetNIP(Guid ID);
-    }
-
-    public interface IEmloyeeRepository
-    {
-        int GetEmployeeID(string employeeLogin);
     }
 
 

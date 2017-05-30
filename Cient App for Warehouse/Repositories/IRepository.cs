@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cient_App_for_Warehouse.Repositories
 {
-    public interface IUserRepository
+    public interface IRepository
     {
-        
     }
 }

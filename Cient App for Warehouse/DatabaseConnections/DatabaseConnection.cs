@@ -15,13 +15,13 @@ namespace Cient_App_for_Warehouse
 
         public event EventHandler<DatabaseConnectionEventArgs> DatabaseConnected;
 
-        public void OnDatabaseConnected(User user)
+        public void OnDatabaseConnected(Employee user)
         {
             if (DatabaseConnected != null)
                 DatabaseConnected(this, new DatabaseConnectionEventArgs() { User = user });
         }
 
-        public SqlConnection OpenNewConnection(User user)
+        public SqlConnection OpenNewConnection(Employee user)
         {
             Connection = new SqlConnection(@"Data Source = localhost\SQLEXPRESS;" +
                                                       " Initial Catalog = Warehouse.Tests; User Id = " + user.Login +
@@ -41,7 +41,7 @@ namespace Cient_App_for_Warehouse
         public event EventHandler<DatabaseConnectionEventArgs> DatabaseConnected;
 
 
-        public SqlConnection OpenNewConnection(User user)
+        public SqlConnection OpenNewConnection(Employee user)
         {
             Connection = new SqlConnection(@"Data Source = localhost\SQLEXPRESS;" +
                                           " Initial Catalog = Warehouse; User Id = " + user.Login +
@@ -52,7 +52,7 @@ namespace Cient_App_for_Warehouse
         }
 
 
-        public void OnDatabaseConnected(User user)
+        public void OnDatabaseConnected(Employee user)
         {
             if (DatabaseConnected != null)
                 DatabaseConnected(this, new DatabaseConnectionEventArgs() { User = user });
